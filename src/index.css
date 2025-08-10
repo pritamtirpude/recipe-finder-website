@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* colors */
+  --color-neutral-100: hsl(45, 20%, 95%);
+  --color-neutral-200: hsl(150, 10%, 89%);
+  --color-neutral-300: hsl(160, 13%, 84%);
+  --color-neutral-600: hsl(166, 22%, 28%);
+  --color-neutral-900: hsl(164, 45%, 16%);
+
+  --color-neutral-orange-500: hsl(21, 98%, 71%);
+
+  --color-neutral-teal-500: hsl(170, 40%, 48%);
+
+  --color-neutral-indigo-500: hsl(230, 62%, 64%);
+
+  /* Font Family Nunito */
+  --font-nunito: "Nunito", sans-serif;
+  --text-nunito-desktop-preset-one: 72px;
+  --text-nunito-desktop-preset-one--line-height: 110%;
+  --text-nunito-desktop-preset-one--letter-spacing: -2px;
+  --text-nunito-desktop-preset-one--font-weight: 800;
+
+  --text-nunito-tablet-preset-one: 64px;
+  --text-nunito-tablet-preset-one--line-height: 110%;
+  --text-nunito-tablet-preset-one--letter-spacing: -2px;
+  --text-nunito-tablet-preset-one--font-weight: 800;
+
+  --text-nunito-mobile-preset-one: 52px;
+  --text-nunito-mobile-preset-one--line-height: 110%;
+  --text-nunito-mobile-preset-one--letter-spacing: -2px;
+  --text-nunito-mobile-preset-one--font-weight: 800;
+
+  --text-nunito-preset-two: 48px;
+  --text-nunito-preset-two--line-height: 120%;
+  --text-nunito-preset-two--letter-spacing: -2px;
+  --text-nunito-preset-two--font-weight: 800;
+
+  --text-nunito-mobile-preset-two: 4px;
+  --text-nunito-mobile-preset-two--line-height: 120%;
+  --text-nunito-mobile-preset-two--letter-spacing: -2px;
+  --text-nunito-mobile-preset-two--font-weight: 800;
+
+  --text-nunito-preset-three: 32px;
+  --text-nunito-preset-three--line-height: 130%;
+  --text-nunito-preset-three--letter-spacing: -1px;
+  --text-nunito-preset-three--font-weight: 700;
+
+  --text-nunito-preset-four: 24px;
+  --text-nunito-preset-four--line-height: 130%;
+  --text-nunito-preset-four--letter-spacing: -1px;
+  --text-nunito-preset-four--font-weight: 700;
+
+  --text-nunito-preset-five: 20px;
+  --text-nunito-preset-five--line-height: 140%;
+  --text-nunito-preset-five--letter-spacing: -0.5px;
+  --text-nunito-preset-five--font-weight: 700;
+
+  --text-nunito-preset-six: 18px;
+  --text-nunito-preset-six--line-height: 150%;
+  --text-nunito-preset-six--letter-spacing: -0.3px;
+  --text-nunito-preset-six--font-weight: 600;
+
+  /* Font Family Nunito Sans */
+  --font-nunito-sans: "Nunito Sans", sans-serif;
+  --text-nunito-sans-preset-one: 20px;
+  --text-nunito-sans-preset-one--line-height: 150%;
+  --text-nunito-sans-preset-one--letter-spacing: -0.4px;
+  --text-nunito-sans-preset-one--font-weight: 500;
+
+  --text-nunito-sans-preset-two: 16px;
+  --text-nunito-sans-preset-two--line-height: 150%;
+  --text-nunito-sans-preset-two--letter-spacing: -0.3px;
+  --text-nunito-sans-preset-two--font-weight: 700;
+
+  --text-nunito-sans-preset-three: 16px;
+  --text-nunito-sans-preset-three--line-height: 150%;
+  --text-nunito-sans-preset-three--letter-spacing: -0.3px;
+  --text-nunito-sans-preset-three--font-weight: 500;
+
+  --text-nunito-sans-preset-four: 14px;
+  --text-nunito-sans-preset-four--line-height: 150%;
+  --text-nunito-sans-preset-four--letter-spacing: -0.3px;
+  --text-nunito-sans-preset-four--font-weight: 700;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal italic;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
+    format("truetype");
+  font-weight: 200 900;
+  font-display: swap;
+  font-style: normal italic;
+}
