@@ -3,7 +3,7 @@ import { features } from '../../util/util';
 
 const Home = () => {
   return (
-    <div className="py-12 lg:py-24">
+    <div className="py-12 md:py-20 lg:py-24">
       <section>
         <div className="flex flex-col lg:items-center lg:justify-center lg:max-2xl:items-start lg:max-2xl:justify-start">
           <h1 className="lg:text-nunito-desktop-preset-one text-nunito-mobile-preset-one md:text-nunito-tablet-preset-one text-neutral-900">
