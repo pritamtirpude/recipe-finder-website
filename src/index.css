@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* colors */
@@ -15,7 +15,7 @@
   --color-neutral-indigo-500: hsl(230, 62%, 64%);
 
   /* Font Family Nunito */
-  --font-nunito: "Nunito", sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
   --text-nunito-desktop-preset-one: 72px;
   --text-nunito-desktop-preset-one--line-height: 110%;
   --text-nunito-desktop-preset-one--letter-spacing: -2px;
@@ -36,7 +36,7 @@
   --text-nunito-preset-two--letter-spacing: -2px;
   --text-nunito-preset-two--font-weight: 800;
 
-  --text-nunito-mobile-preset-two: 4px;
+  --text-nunito-mobile-preset-two: 40px;
   --text-nunito-mobile-preset-two--line-height: 120%;
   --text-nunito-mobile-preset-two--letter-spacing: -2px;
   --text-nunito-mobile-preset-two--font-weight: 800;
@@ -62,7 +62,7 @@
   --text-nunito-preset-six--font-weight: 600;
 
   /* Font Family Nunito Sans */
-  --font-nunito-sans: "Nunito Sans", sans-serif;
+  --font-nunito-sans: 'Nunito Sans', sans-serif;
   --text-nunito-sans-preset-one: 20px;
   --text-nunito-sans-preset-one--line-height: 150%;
   --text-nunito-sans-preset-one--letter-spacing: -0.4px;
@@ -82,21 +82,30 @@
   --text-nunito-sans-preset-four--line-height: 150%;
   --text-nunito-sans-preset-four--letter-spacing: -0.3px;
   --text-nunito-sans-preset-four--font-weight: 700;
+
+  /* Border Radius */
+  --radius-6: 6px;
+  --radius-10: 10px;
+  --radius-20: 20px;
 }
 
 @font-face {
-  font-family: "Nunito";
-  src: url("/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("truetype");
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
   font-weight: 200 900;
   font-display: swap;
   font-style: normal italic;
 }
 
 @font-face {
-  font-family: "Nunito Sans";
-  src: url("/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf")
-    format("truetype");
+  font-family: 'Nunito Sans';
+  src: url('/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf') format('truetype');
   font-weight: 200 900;
   font-display: swap;
   font-style: normal italic;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  overflow-x: hidden;
 }
