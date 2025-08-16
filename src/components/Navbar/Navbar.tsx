@@ -1,16 +1,15 @@
 import { motion } from 'motion/react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { Link, useLocation } from 'react-router';
+import { Button } from '../../components';
 import { navLinks } from '../../util/util';
+
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const { pathname } = useLocation();
 
-  console.log(pathname);
-
   return (
-    <nav className="flex items-center justify-between border-b border-b-neutral-300 px-4 py-5 md:px-8 md:py-8 md:pb-5 lg:px-15 lg:py-6.5">
+    <nav className="sticky inset-0 z-50 flex items-center justify-between border-b border-b-neutral-300 bg-white px-4 py-5 md:px-8 md:py-8 md:pb-5 lg:px-15 lg:py-6.5">
       <div>
         <Link to="/">
           <img src="/assets/images/logo.svg" alt="logo" />
@@ -34,12 +33,7 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <button
-        onClick={() => navigate('/recipes')}
-        className="rounded-10 text-nunito-preset-five hidden cursor-pointer bg-neutral-900 px-4 py-3 font-bold text-white focus:outline-offset-4 focus:outline-neutral-900 lg:block"
-      >
-        Browse recipes
-      </button>
+      <Button label="Browse recipes" href="/recipes" isHidden={true} />
 
       <HamburgerMenu />
     </nav>
