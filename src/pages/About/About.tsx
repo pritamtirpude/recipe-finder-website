@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div className="py-12 md:py-20 lg:py-24">
-      <section className="grid grid-cols-1 items-start gap-10 md:gap-16 lg:grid-cols-2 lg:items-center lg:max-2xl:grid-cols-1 lg:max-2xl:gap-16">
+      <section className="grid grid-cols-1 items-start gap-10 md:gap-16 lg:grid-cols-2 lg:items-center">
         <div>
           <div className="bg-neutral-orange-500 w-[120px] rounded-md px-1.5 py-0.5">
             <span className="text-nunito-preset-five text-neutral-900">Our mission</span>
@@ -37,7 +37,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-2 lg:gap-16 lg:max-2xl:grid-cols-1">
+      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-2 lg:gap-16">
         <div>
           <h2 className="md:text-nunito-preset-two text-nunito-mobile-preset-two text-neutral-900">
             Why we exist
@@ -106,7 +106,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-2 lg:gap-16 lg:max-2xl:grid-cols-1">
+      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-2 lg:gap-16">
         <div>
           <h3 className="md:text-nunito-preset-two text-nunito-mobile-preset-two text-neutral-900">
             Our food philosophy
@@ -187,7 +187,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-3 lg:items-center lg:gap-16 lg:max-2xl:grid-cols-1">
+      <section className="mt-12 grid grid-cols-1 gap-10 md:mt-20 lg:mt-24 lg:grid-cols-3 lg:items-center lg:gap-16">
         <div>
           <h4 className="md:text-nunito-preset-two text-nunito-mobile-preset-two text-neutral-900">
             Beyond the plate

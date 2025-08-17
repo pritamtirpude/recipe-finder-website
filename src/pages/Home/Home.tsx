@@ -5,14 +5,14 @@ const Home = () => {
   return (
     <div className="py-12 md:py-20 lg:py-24">
       <section>
-        <div className="flex flex-col lg:items-center lg:justify-center lg:max-2xl:items-start lg:max-2xl:justify-start">
+        <div className="flex flex-col lg:items-center lg:justify-center">
           <h1 className="lg:text-nunito-desktop-preset-one text-nunito-mobile-preset-one md:text-nunito-tablet-preset-one text-neutral-900">
             <span className="after:bg-neutral-orange-500 relative after:absolute after:top-8 after:left-0 after:-z-10 after:h-6 after:w-full after:rounded after:opacity-40 after:content-[''] after:md:top-12 after:md:h-7 after:lg:h-10">
               Healthy
             </span>
             &nbsp; meals, zero fuss
           </h1>
-          <p className="text-nunito-sans-preset-one mb-8 max-w-[580px] text-neutral-600 lg:mb-10 lg:text-center lg:max-2xl:text-left">
+          <p className="text-nunito-sans-preset-one mb-8 max-w-[580px] text-neutral-600 lg:mb-10 lg:text-center">
             Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no
             guesswork.
           </p>
@@ -34,11 +34,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-16 md:mt-20 lg:mt-24 lg:max-2xl:mt-20">
-        <h2 className="text-nunito-mobile-preset-two md:text-nunito-preset-two text-left text-neutral-900 lg:text-center lg:max-2xl:text-left">
+      <section className="mt-16 md:mt-20 lg:mt-24">
+        <h2 className="text-nunito-mobile-preset-two md:text-nunito-preset-two text-left text-neutral-900 lg:text-center">
           What you'll get
         </h2>
-        <div className="mt-12 grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3 lg:max-2xl:grid-cols-1 lg:max-2xl:gap-8">
+        <div className="mt-12 grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
           {features.map((feature) => (
             <div key={feature.title}>
               <div className="flex size-14.5 flex-col items-center justify-center rounded-xl bg-white p-2.5 shadow-md">
@@ -53,7 +53,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="mt-16 flex flex-col gap-8 md:mt-20 md:gap-10 lg:mt-24 lg:flex-row lg:items-center lg:gap-12 lg:max-2xl:flex-col">
+      <section className="mt-16 flex flex-col gap-8 md:mt-20 md:gap-10 lg:mt-24 lg:flex-row lg:items-center lg:gap-12">
         <div>
           <h4 className="md:text-nunito-preset-two text-nunito-mobile-preset-two text-neutral-900">
             Built for real life

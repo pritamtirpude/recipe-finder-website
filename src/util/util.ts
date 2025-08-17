@@ -28,3 +28,49 @@ export const features = [
     description: 'Filter by name or ingredient and jump straight to the recipe you need.',
   },
 ];
+
+export const prepData = [
+  {
+    id: 'prepTime',
+    label: '0 Minutes',
+    value: '0',
+  },
+  {
+    id: 'prepTime',
+    label: '5 Minutes',
+    value: '5',
+  },
+  {
+    id: 'prepTime',
+    label: '10 Minutes',
+    value: '10',
+  },
+];
+
+export const cookData = [
+  {
+    id: 'cookTime',
+    label: '0 Minutes',
+    value: '0',
+  },
+  {
+    id: 'cookTime',
+    label: '5 Minutes',
+    value: '5',
+  },
+  {
+    id: 'cookTime',
+    label: '10 Minutes',
+    value: '10',
+  },
+  {
+    id: 'cookTime',
+    label: '15 Minutes',
+    value: '15',
+  },
+  {
+    id: 'cookTime',
+    label: '20 Minutes',
+    value: '20',
+  },
+];
