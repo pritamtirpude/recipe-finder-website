@@ -14,7 +14,7 @@ const Button = ({ label, href, isHidden, styles }: ButtonProps) => {
     <button
       onClick={() => navigate(href)}
       className={cn(
-        'rounded-10 text-nunito-preset-five w-fit cursor-pointer bg-neutral-900 px-4 py-3 font-bold text-white focus:outline-offset-4 focus:outline-neutral-900 lg:block lg:w-auto',
+        'rounded-10 text-nunito-preset-five cursor-pointer bg-neutral-900 px-4 py-3 font-bold text-white focus:outline-offset-4 focus:outline-neutral-900 lg:block',
         styles,
         isHidden ? 'hidden' : 'block',
       )}
