@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import Button from '../Button/Button';
 
 type RecipeCardProps = {
@@ -6,17 +7,20 @@ type RecipeCardProps = {
 
 const RecipeCard = ({ recipe }: RecipeCardProps) => {
   return (
-    <div key={recipe.id} className="rounded-10 overflow-hidden bg-white px-2 py-4 shadow-md">
-      <img
-        className="rounded-10 hidden h-auto w-full object-cover md:block"
-        src={recipe.image.large}
-        alt={recipe.title}
-      />
-      <img
-        className="rounded-10 block h-auto w-full object-cover md:hidden"
-        src={recipe.image.small}
-        alt={recipe.title}
-      />
+    <div className="rounded-10 overflow-hidden bg-white px-2 py-4 shadow-md">
+      <Link to={`/recipes/${recipe.slug}`}>
+        <img
+          className="rounded-10 hidden h-auto w-full object-cover md:block"
+          src={recipe.image.large}
+          alt={recipe.title}
+        />
+        <img
+          className="rounded-10 block h-auto w-full object-cover md:hidden"
+          src={recipe.image.small}
+          alt={recipe.title}
+        />
+      </Link>
+
       <h5 className="text-nunito-preset-five mt-4 text-neutral-900">{recipe.title}</h5>
       <p className="text-nunito-sans-preset-three mt-2.5 max-w-[344px] text-neutral-600">
         {recipe.overview}
@@ -42,8 +46,11 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
           </p>
         </div>
       </div>
-      {/* <button className="w-full bg-neutral-900 text-white">View Recipe</button> */}
-      <Button label="View Recipe" href="/recipes/[recipe.id]" styles="mt-4 rounded-full w-full" />
+      <Button
+        label="View Recipe"
+        href={`/recipes/${recipe.slug}`}
+        styles="mt-4 rounded-full w-full"
+      />
     </div>
   );
 };
