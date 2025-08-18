@@ -7,7 +7,7 @@ const Layout = () => {
     <Fragment>
       <Navbar />
 
-      <main className="px-4 md:px-8 lg:mx-auto lg:max-w-[1440px] lg:px-0">
+      <main className="px-4 md:px-8 lg:mx-auto lg:max-w-[1192px] lg:px-0 xl:max-w-[1440px]">
         <Outlet />
       </main>
 

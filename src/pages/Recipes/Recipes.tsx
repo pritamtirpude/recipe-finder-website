@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { FilterDropdown, RecipeCard, SearchInput } from '../../components';
 import { useRecipeParams } from '../../hooks/useRecipeParams';
+import useWindowOutsideClick from '../../hooks/useWindowOutsideClick';
 import { useFilterStore } from '../../store/filterStore';
 import { useRecipesStore } from '../../store/recipesStore';
 import { cookData, prepData } from '../../util/util';
@@ -15,7 +16,25 @@ const Recipes = () => {
     resetFilters,
     searchRecipes,
   } = useRecipesStore();
-  const { togglePrepTime, isPrepTimeOpen, toggleCookTime, isCookTimeOpen } = useFilterStore();
+  const {
+    togglePrepTime,
+    isPrepTimeOpen,
+    toggleCookTime,
+    isCookTimeOpen,
+    closePrepTime,
+    closeCookTime,
+  } = useFilterStore();
+
+  // Outside click hooks for closing dropdowns
+  const prepTimeRef = useWindowOutsideClick<HTMLDivElement>({
+    onOutsideClick: closePrepTime,
+    isOpen: isPrepTimeOpen,
+  });
+
+  const cookTimeRef = useWindowOutsideClick<HTMLDivElement>({
+    onOutsideClick: closeCookTime,
+    isOpen: isCookTimeOpen,
+  });
 
   useEffect(() => {
     if (params.prepTime) {
@@ -58,12 +77,14 @@ const Recipes = () => {
       <div className="mt-16 flex flex-col items-center gap-3 md:flex-row md:justify-normal lg:justify-between">
         <div className="flex w-full flex-col items-center gap-3 md:flex-row lg:gap-4">
           <div
+            ref={prepTimeRef}
             onClick={() => togglePrepTime()}
             onMouseEnter={() => {
               if (isCookTimeOpen) {
                 toggleCookTime();
               }
             }}
+            title="Max Prep Time"
             tabIndex={0}
             role="button"
             aria-expanded={isPrepTimeOpen}
@@ -78,12 +99,14 @@ const Recipes = () => {
             {isPrepTimeOpen && <FilterDropdown filterList={prepData} filterType="prepTime" />}
           </div>
           <div
+            ref={cookTimeRef}
             onClick={() => toggleCookTime()}
             onMouseEnter={() => {
               if (isPrepTimeOpen) {
                 togglePrepTime(); // Close prep time if it's open
               }
             }}
+            title="Max Cook Time"
             tabIndex={0}
             role="button"
             aria-expanded={isCookTimeOpen}
