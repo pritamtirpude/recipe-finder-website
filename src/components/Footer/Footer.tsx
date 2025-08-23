@@ -13,7 +13,7 @@ const Footer = () => {
           <p className="text-nunito-sans-preset-one mt-3 text-center text-neutral-600">
             Hit the button, pick a recipe, and get dinner on the table—fast.
           </p>
-          <Button label="Browse recipes" href="/recipes" styles="mt-10" />
+          <Button label="Browse recipes" href="/recipes" styles="mt-10" isActive="recipes" />
         </div>
         <div className="absolute -z-10 hidden size-full bg-[url(/assets/images/pattern-knife.svg)] bg-contain bg-right bg-no-repeat md:-top-10 md:right-0 md:block md:size-[170px] lg:top-0 lg:-right-14 lg:block lg:size-full lg:max-2xl:-top-10 lg:max-2xl:right-0 lg:max-2xl:size-[170px]" />
       </div>
