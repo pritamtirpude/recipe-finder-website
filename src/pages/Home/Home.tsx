@@ -20,7 +20,7 @@ const Home = () => {
         </div>
 
         <div className="mt-10 lg:mt-20">
-          <div className="absolute left-0 -z-10 size-full bg-[url(/assets/images/pattern-squiggle-1.svg)] bg-contain bg-no-repeat 2xl:top-1/2" />
+          <div className="absolute left-0 -z-10 size-full bg-[url(/assets/images/pattern-squiggle-1.svg)] bg-contain bg-no-repeat 2xl:hidden" />
           <img
             className="hidden rounded-xl md:block lg:block"
             src="/assets/images/image-home-hero-large.webp"

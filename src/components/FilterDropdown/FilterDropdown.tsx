@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { useRecipeParams } from '../../hooks/useRecipeParams';
 
 type FilterDropdownProps = {
@@ -11,7 +12,13 @@ const FilterDropdown = ({ filterList, filterType }: FilterDropdownProps) => {
   const currentValue = filterType === 'prepTime' ? params.prepTime : params.cookTime;
 
   return (
-    <div className="absolute top-14 left-0 z-30 h-auto w-full rounded-lg border border-neutral-300 bg-white p-2 md:w-[240px]">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.85 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.2 }}
+      exit={{ opacity: 0, scale: 0.85 }}
+      className="absolute top-14 left-0 z-30 h-auto w-full transform rounded-lg border border-neutral-300 bg-white p-2 will-change-transform md:w-[240px]"
+    >
       {filterList.map((data) => (
         <div key={data.value} tabIndex={0}>
           <div
@@ -46,7 +53,7 @@ const FilterDropdown = ({ filterList, filterType }: FilterDropdownProps) => {
       >
         Clear
       </button>
-    </div>
+    </motion.div>
   );
 };
 

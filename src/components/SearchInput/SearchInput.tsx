@@ -11,9 +11,11 @@ const SearchInput = () => {
         className="absolute top-1/2 left-4 -translate-y-1/2 transform"
       />
       <input
+        id="search"
+        name="search"
         value={params.search ?? ''}
         onChange={(e) => {
-          setParams({ search: e.target.value });
+          setParams({ search: e.target.value || null });
         }}
         className="rounded-10 text-nunito-preset-six w-full border border-neutral-300 py-2.5 pl-11 placeholder:text-neutral-900 hover:outline hover:outline-neutral-900 focus:outline-2 lg:w-[310px]"
         type="text"

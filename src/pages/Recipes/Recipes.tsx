@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'motion/react';
 import { useEffect } from 'react';
 import { FilterDropdown, RecipeCard, SearchInput } from '../../components';
 import { useRecipeParams } from '../../hooks/useRecipeParams';
@@ -51,6 +52,8 @@ const Recipes = () => {
   useEffect(() => {
     if (params.search) {
       searchRecipes(params.search);
+    } else {
+      searchRecipes('');
     }
   }, [params.search, searchRecipes]);
 
@@ -59,6 +62,13 @@ const Recipes = () => {
       resetFilters();
     }
   }, [params.prepTime, params.cookTime, params.search, resetFilters]);
+
+  useEffect(() => {
+    if (params.prepTime && params.cookTime) {
+      filterPrepTimeRecipes(params.prepTime);
+      filterCookTimeRecipes(params.cookTime);
+    }
+  }, [filterCookTimeRecipes, filterPrepTimeRecipes, params.cookTime, params.prepTime]);
 
   return (
     <div className="py-12 md:py-20 lg:py-24">
@@ -95,8 +105,9 @@ const Recipes = () => {
               Max Prep Time
             </span>
             <img src="/assets/images/icon-chevron-down.svg" alt="icon chevron" />
-
-            {isPrepTimeOpen && <FilterDropdown filterList={prepData} filterType="prepTime" />}
+            <AnimatePresence>
+              {isPrepTimeOpen && <FilterDropdown filterList={prepData} filterType="prepTime" />}
+            </AnimatePresence>
           </div>
           <div
             ref={cookTimeRef}
@@ -117,19 +128,20 @@ const Recipes = () => {
               Max Cook Time
             </span>
             <img src="/assets/images/icon-chevron-down.svg" alt="icon chevron" />
-
-            {isCookTimeOpen && <FilterDropdown filterList={cookData} filterType="cookTime" />}
+            <AnimatePresence>
+              {isCookTimeOpen && <FilterDropdown filterList={cookData} filterType="cookTime" />}
+            </AnimatePresence>
           </div>
         </div>
 
         <SearchInput />
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
+      <motion.div layout className="mt-6 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
         {filteredRecipes.map((recipe) => (
-          <RecipeCard key={recipe.id} recipe={recipe} />
+          <RecipeCard key={recipe.slug} recipe={recipe} />
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

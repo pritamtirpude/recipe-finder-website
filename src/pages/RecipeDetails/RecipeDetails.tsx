@@ -1,9 +1,11 @@
-import { Link, useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import { RecipeCard } from '../../components';
 import { useRecipesStore } from '../../store/recipesStore';
 
 const RecipeDetails = () => {
   const { slug } = useParams();
+
+  const navigate = useNavigate();
 
   const { getRecipeBySlug, recipes } = useRecipesStore();
 
@@ -19,9 +21,12 @@ const RecipeDetails = () => {
   return (
     <div className="py-12 md:py-20 lg:py-24">
       <div className="flex items-center gap-1.5">
-        <Link to="/recipes" className="text-nunito-preset-six text-neutral-900/60">
+        <span
+          onClick={() => navigate(-1)}
+          className="text-nunito-preset-six cursor-pointer text-neutral-900/60"
+        >
           Recipes
-        </Link>
+        </span>
         <span className="text-nunito-preset-six text-neutral-900/60">/</span>
         <span className="text-nunito-preset-six truncate text-neutral-900">{recipe?.title}</span>
       </div>

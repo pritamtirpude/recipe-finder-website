@@ -1,3 +1,4 @@
+import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import Button from '../Button/Button';
 
@@ -7,7 +8,7 @@ type RecipeCardProps = {
 
 const RecipeCard = ({ recipe }: RecipeCardProps) => {
   return (
-    <div className="rounded-10 overflow-hidden bg-white px-2 py-4 shadow-md">
+    <motion.div layout className="rounded-10 overflow-hidden bg-white px-2 py-4 shadow-md">
       <Link to={`/recipes/${recipe.slug}`}>
         <img
           className="rounded-10 hidden h-auto w-full object-cover md:block"
@@ -51,7 +52,7 @@ const RecipeCard = ({ recipe }: RecipeCardProps) => {
         href={`/recipes/${recipe.slug}`}
         styles="mt-4 rounded-full w-full"
       />
-    </div>
+    </motion.div>
   );
 };
 
