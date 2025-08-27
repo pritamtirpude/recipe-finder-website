@@ -9,18 +9,20 @@ type RecipeCardProps = {
 const RecipeCard = ({ recipe }: RecipeCardProps) => {
   return (
     <motion.div layout className="rounded-10 overflow-hidden bg-white px-2 py-4 shadow-md">
-      <Link to={`/recipes/${recipe.slug}`}>
-        <img
-          className="rounded-10 hidden h-auto w-full object-cover md:block"
-          src={recipe.image.large}
-          alt={recipe.title}
-        />
-        <img
-          className="rounded-10 block h-auto w-full object-cover md:hidden"
-          src={recipe.image.small}
-          alt={recipe.title}
-        />
-      </Link>
+      <div className="rounded-10 overflow-hidden">
+        <Link to={`/recipes/${recipe.slug}`}>
+          <img
+            className="rounded-10 hidden h-auto w-full object-cover duration-300 hover:scale-110 md:block"
+            src={recipe.image.large}
+            alt={recipe.title}
+          />
+          <img
+            className="rounded-10 block h-auto w-full object-cover duration-300 hover:scale-110 md:hidden"
+            src={recipe.image.small}
+            alt={recipe.title}
+          />
+        </Link>
+      </div>
 
       <h5 className="text-nunito-preset-five mt-4 text-neutral-900">{recipe.title}</h5>
       <p className="text-nunito-sans-preset-three mt-2.5 max-w-[344px] text-neutral-600">

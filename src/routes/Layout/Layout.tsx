@@ -1,8 +1,11 @@
 import { Fragment } from 'react';
 import { Outlet } from 'react-router';
 import { Footer, Navbar } from '../../components';
+import useScrollToTop from '../../hooks/useScrollToTop';
 
 const Layout = () => {
+  useScrollToTop();
+
   return (
     <Fragment>
       <Navbar />
