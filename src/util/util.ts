@@ -31,17 +31,17 @@ export const features = [
 
 export const prepData = [
   {
-    id: 'prepTime',
+    id: 'prepTime0',
     label: '0 Minutes',
     value: '0',
   },
   {
-    id: 'prepTime',
+    id: 'prepTime5',
     label: '5 Minutes',
     value: '5',
   },
   {
-    id: 'prepTime',
+    id: 'prepTime10',
     label: '10 Minutes',
     value: '10',
   },
@@ -49,27 +49,27 @@ export const prepData = [
 
 export const cookData = [
   {
-    id: 'cookTime',
+    id: 'cookTime0',
     label: '0 Minutes',
     value: '0',
   },
   {
-    id: 'cookTime',
+    id: 'cookTime5',
     label: '5 Minutes',
     value: '5',
   },
   {
-    id: 'cookTime',
+    id: 'cookTime10',
     label: '10 Minutes',
     value: '10',
   },
   {
-    id: 'cookTime',
+    id: 'cookTime15',
     label: '15 Minutes',
     value: '15',
   },
   {
-    id: 'cookTime',
+    id: 'cookTime20',
     label: '20 Minutes',
     value: '20',
   },

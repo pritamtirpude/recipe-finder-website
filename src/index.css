@@ -109,3 +109,29 @@ body {
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-neutral-300);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-900);
+  border-radius: 6px;
+  border: 2px solid var(--color-neutral-300);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neutral-600);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-neutral-900) var(--color-neutral-300);
+}

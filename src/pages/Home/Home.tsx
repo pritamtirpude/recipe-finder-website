@@ -16,7 +16,7 @@ const Home = () => {
             Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no
             guesswork.
           </p>
-          <Button label="Start exploring" href="/recipes" styles="px-8 py-4" />
+          <Button label="Start exploring" href="/recipes" styles="px-8 py-4" isActive="recipes" />
         </div>
 
         <div className="mt-10 lg:mt-20">

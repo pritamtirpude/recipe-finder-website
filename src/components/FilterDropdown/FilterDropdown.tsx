@@ -22,7 +22,7 @@ const FilterDropdown = ({ filterList, filterType }: FilterDropdownProps) => {
       {filterList.map((data) => (
         <div key={data.value} tabIndex={0}>
           <div
-            className="flex cursor-pointer items-center gap-2 p-2"
+            className="flex items-center gap-2 p-2"
             onClick={() => {
               setParams({ [filterType]: data.value ?? '' });
             }}
@@ -32,12 +32,12 @@ const FilterDropdown = ({ filterList, filterType }: FilterDropdownProps) => {
               type="radio"
               id={`${filterType}-${data.id}`}
               name={filterType}
-              className="size-4 accent-neutral-900"
+              className="size-4 cursor-pointer accent-neutral-900"
               readOnly
             />
             <label
               htmlFor={`${filterType}-${data.id}`}
-              className="text-nunito-preset-six text-neutral-900"
+              className="text-nunito-preset-six cursor-pointer text-neutral-900"
             >
               {data.label}
             </label>
