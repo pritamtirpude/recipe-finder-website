@@ -9,7 +9,7 @@ const Navbar = () => {
   const { isOpen, toggle, isActive, setIsActive } = useMobileStore();
 
   return (
-    <nav className="sticky inset-0 z-50 flex items-center justify-between border-b border-b-neutral-300 bg-white px-4 py-5 md:px-8 md:py-8 md:pb-5 lg:px-15 lg:py-6.5">
+    <nav className="sticky inset-0 z-50 flex items-center justify-between border-b border-b-neutral-300 bg-neutral-100 px-4 py-5 md:px-8 md:py-8 md:pb-5 lg:px-15 lg:py-6.5">
       <div>
         <Link to="/">
           <img src="/assets/images/logo.svg" alt="logo" />
